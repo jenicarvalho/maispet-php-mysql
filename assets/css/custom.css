@@ -1,0 +1,13 @@
+
+.alert.alert-danger a {
+  color: #000
+}
+
+.comentarios .testimonial:before,
+.comentarios .testimonial:after {
+	border: 0
+}
+
+.comentarios .testimonial {
+	margin: 0 10px 30px;
+}
