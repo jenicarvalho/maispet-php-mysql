@@ -75,7 +75,7 @@
                   <label for="job_title">Confirmar Senha</label>
                   <div class="field">
                     <input type="password" class="form-control" name="pass2" id="pass2" onkeyup="validarSenha()" placeholder="" value=""/>
-                   <span id="resultado">&nbsp;</span>
+                    <span id="resultado">&nbsp;</span>
                   </div>
                 </fieldset>
                 
@@ -156,7 +156,7 @@
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">Telefone</label>
                   <div class="field">
-                    <input type="text" id="tel" class="form-control" name="phone" placeholder="" value=""/>
+                    <input type="text" id="tel" class="form-control" name="phoneHouse" placeholder="" value=""/>
                   </div>
                 </fieldset>
 
