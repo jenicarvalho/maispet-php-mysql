@@ -1,12 +1,10 @@
 <?php
 
-  function __autoload($class_name) {
-    require_once 'Controller/' . $class_name . '.php';
-  }
+  $caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
 
   $success = false;
-  require_once("Controller/UsuariosAdministrativos.php");
-  require_once "view/includes/head.php";
+  require_once($caminhoUrlAdm."/Controller/UsuariosAdministrativos.php");
+  require_once($caminhoUrlAdm."/View/includes/head.php");
 ?>
 <!-- Begin page -->
  <div id="wrapper">

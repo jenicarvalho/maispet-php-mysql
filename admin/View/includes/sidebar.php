@@ -79,6 +79,9 @@
                         <li>
                             <a href="?pagina=relatorios" class="waves-effect"><i class="fa  fa-line-chart"></i> <span>Relatórios</span> </a>
                         </li>
+                        <li>
+                            <a href="?pagina=administrativos" class="waves-effect"><i class="fa  user"></i> <span>Administradores</span> </a>
+                        </li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>

@@ -126,9 +126,43 @@
 	<!-- Javascript Files
 	================================================== -->
 	<script src="assets/vendor/jquery-1.11.0.min.js"></script>
-	<script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
-	<script src="assets/vendor/bootstrap.js"></script>
-	<script src="assets/vendor/jquery.flexnav.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/jquery.mask.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#campoData').mask('00/00/0000');
+    });
+    
+   $(document).ready(function(){
+      $('#cpf').mask('000.000.000-00');
+    });
+   
+   $(document).ready(function(){
+      $('#tel').mask('(00)0000-0000');
+    });
+   
+   $(document).ready(function(){
+      $('#cel').mask('(00)00000-0000');
+    })
+  </script>
+  <script>
+    function validarSenha() {
+      var campo1 = document.getElementById('pass').value;
+      var campo2 = document.getElementById('pass2').value;
+   +
+      if (campo1 == campo2) {
+        document.getElementById('resultado').style.color = "#00913d";
+        document.getElementById('resultado').innerHTML = "As Senhas são iguais";
+      } else {
+        document.getElementById('resultado').style.color = "#ff0000";
+        document.getElementById('resultado').innerHTML = "As senhas não correspondem";
+      } 
+    }
+  </script>
+  <script type="text/javascript" src="assets/vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/bootstrap-notify.min.js"></script>
+  <script src="assets/vendor/jquery.flexnav.min.js"></script>
+
 	<script src="assets/vendor/jquery.hoverIntent.minified.js"></script>
 	<script src="assets/vendor/jquery.flickrfeed.js"></script>
 	<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>

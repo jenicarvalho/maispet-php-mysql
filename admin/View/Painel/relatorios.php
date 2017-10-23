@@ -129,7 +129,7 @@ $mesAtual = date('m');
                     </div> <!-- container -->
 
                     <footer class="footer">
-                        Mais Pet
+                2017 © MaisPet.
                     </footer>
 
                 </div>

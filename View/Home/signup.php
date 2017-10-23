@@ -67,28 +67,29 @@
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">Senha</label>
                   <div class="field">
-                    <input type="password" class="form-control" name="pass" id="pass1" placeholder="" value=""/>
+                    <input type="password" class="form-control" name="pass" id="pass" onkeyup="validarSenha()" placeholder="" value=""/>
                   </div>
                 </fieldset>
 
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">Confirmar Senha</label>
                   <div class="field">
-                    <input type="password" class="form-control" name="pass" id="pass2" placeholder="" value=""/>
+                    <input type="password" class="form-control" name="pass2" id="pass2" onkeyup="validarSenha()" placeholder="" value=""/>
+                   <span id="resultado">&nbsp;</span>
                   </div>
                 </fieldset>
                 
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">CPF</label>
                   <div class="field">
-                    <input type="text" class="form-control" name="document" id="job_title" placeholder="" value=""/>
+                    <input type="text" id="cpf" class="form-control" name="document" placeholder="" value=""/>
                   </div>
                 </fieldset>
                 
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">Data de Aniversário</label>
                   <div class="field">
-                    <input type="text" class="form-control" name="birthdayDate" id="job_title" placeholder="10/10/1990" value=""/>
+                    <input type="text" id="campoData" class="form-control" name="birthdayDate" placeholder="10/10/1990" value=""/>
                   </div>
                 </fieldset>
 
@@ -148,14 +149,14 @@
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">Celular</label>
                   <div class="field">
-                    <input type="text" class="form-control" name="phone" id="job_title" placeholder="" value=""/>
+                    <input type="text" id="cel" class="form-control" name="phone" placeholder="" value=""/>
                   </div>
                 </fieldset>
                 
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">Telefone</label>
                   <div class="field">
-                    <input type="text" class="form-control" name="phoneHouse" id="job_title" placeholder="" value=""/>
+                    <input type="text" id="tel" class="form-control" name="phone" placeholder="" value=""/>
                   </div>
                 </fieldset>
 

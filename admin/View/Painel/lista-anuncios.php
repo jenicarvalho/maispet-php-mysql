@@ -261,6 +261,7 @@ if ( isset($_SESSION['usuarioADM']) ) :
                                             <tr> 
                                               <th>Nome do Animal</th> 
                                               <th>Porte</th> 
+                                              <th>Tipo</th> 
                                               <th>Sexo</th>  
                                               <th>Raça</th>   
                                               <th>Anúncio</th>  
@@ -272,6 +273,7 @@ if ( isset($_SESSION['usuarioADM']) ) :
                                              <tr> 
                                                <td><?php echo utf8_encode($valor->nomeAnimal) ?> </td> 
                                                <td><?php echo utf8_encode($valor->porte)?> </td>
+                                               <td><?php echo utf8_encode($valor->tipo)?> </td>
                                                <td><?php echo utf8_encode($valor->sexo)?> </td>
                                                <td><?php echo utf8_encode($valor->raca)?> </td>
                                                <td><a href="../?pagina=interna-anuncio&CodAnimal=<?php echo $valor->idAnimal?>" target="_blank">Ver Anúncio</a></td>

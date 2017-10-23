@@ -243,7 +243,7 @@ $resultadoProprietario = $proprietario->find($idproprietario);
                 </div> <!-- content -->
 
                 <footer class="footer">
-                    Mais Pet
+                2017 © MaisPet.
                 </footer>
 
             </div>

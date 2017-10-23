@@ -10,11 +10,25 @@
 if ( isset($_SESSION['usuarioADM']) ) : 
 
 $caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
+$caminhoUrl = $_SERVER['DOCUMENT_ROOT']."/maispet";
 
 $success = true;
 require_once($caminhoUrlAdm."/Controller/LoginAdministrativoController.php");
 require_once($caminhoUrlAdm."/View/includes/head.php");
 
+//intervencao
+require_once($caminhoUrl."/Model/Intervencao.php");
+$intervencao = new Intervencao(); 
+
+//proprietarios
+require_once($caminhoUrl."/Model/Proprietarios.php");
+$proprietario = new Proprietarios();
+
+//animais
+require_once($caminhoUrl."/Model/Animais.php");
+$animal = new Animais(
+);
+$mesAtual = date('m');
 ?>
 
 <body class="fixed-left">
@@ -63,18 +77,18 @@ require_once($caminhoUrlAdm."/View/includes/head.php");
 
                         <div class="col-md-6">
                     		<div class="card-box">
-                    			<h4 class="header-title m-t-0 m-b-30">Novos Cadastros no Site</h4>
+                    			<h4 class="header-title m-t-0 m-b-30">Cadastro de Proprietários</h4>
                                 <div class="widget-box-2">
                                     <div class="widget-detail-2">
-                                        <span class="badge badge-success pull-left m-t-20">32% <i class="zmdi zmdi-trending-up"></i> </span>
-                                        <h2 class="m-b-0"> 200 </h2>
-                                        <p class="text-muted m-b-25">Efetuados essa semana</p>
+                                        <h2 class="m-b-0"><?php echo count($proprietario->findAllCustom("WHERE MONTH(data_cadastro) = '$mesAtual' "));?> cadastros 
+                                        <span class="badge badge-success pull-left m-t-20"> <i class="zmdi zmdi-trending-up"></i> </span>
+                                        </h2>
+                                        <p class="text-muted m-b-25">Efetuados esse mês</p>
                                     </div>
                                     <div class="progress progress-bar-success-alt progress-sm m-b-0">
                                         <div class="progress-bar progress-bar-success" role="progressbar"
                                              aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
                                              style="width: 77%;">
-                                            <span class="sr-only">77% Complete</span>
                                         </div>
                                     </div>
                                 </div>
@@ -87,15 +101,14 @@ require_once($caminhoUrlAdm."/View/includes/head.php");
 
                                 <div class="widget-box-2">
                                     <div class="widget-detail-2">
-                                        <span class="badge badge-pink pull-left m-t-20">20% <i class="zmdi zmdi-trending-up"></i> </span>
-                                        <h2 class="m-b-0"> 30 </h2>
+                                        <span class="badge badge-pink pull-left m-t-20"> <i class="zmdi zmdi-trending-up"></i> </span>
+                                        <h2 class="m-b-0"> <?php echo count($intervencao->findAllCustom("WHERE MONTH(data) = '$mesAtual' "));?> pedidos </h2>
                                         <p class="text-muted m-b-25">Pedidos feitos esse mês</p>
                                     </div>
                                     <div class="progress progress-bar-pink-alt progress-sm m-b-0">
                                         <div class="progress-bar progress-bar-pink" role="progressbar"
                                              aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
                                              style="width: 77%;">
-                                            <span class="sr-only">77% Complete</span>
                                         </div>
                                     </div>
                                 </div>
@@ -106,58 +119,24 @@ require_once($caminhoUrlAdm."/View/includes/head.php");
                     <!-- end row -->
 
                     <div class="row">
-                    	<h2 class="page-title">Perfis dos novos cadastrados</h2>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card-box widget-user">
-                                <div>
-                                    <img src="view/assets/images/users/avatar-3.jpg" class="img-responsive img-circle" alt="user">
-                                    <div class="wid-u-info">
-                                        <h4 class="m-t-0 m-b-5 font-600">Beatriz C.</h4>
-                                        <p class="text-muted m-b-5 font-13">beatrizc@gmail.com</p>
-                                        <small class="text-warning"><b>(19) 0000-0000</b></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                    	<h2 class="page-title">Anúncios Cadastrados</h2>
+
+                        <?php foreach( $animal->findAllCustom("ORDER BY idAnimal DESC LIMIT 4") as $key => $valor) : ?>
 
                         <div class="col-lg-3 col-md-6">
                             <div class="card-box widget-user">
                                 <div>
-                                    <img src="view/assets/images/users/avatar-2.jpg" class="img-responsive img-circle" alt="user">
+                                    <img src="<?php echo '../uploads/animais/' . utf8_encode($valor->fotoAnimal) ?>" width="60" height="60" class="img-responsive img-circle" alt="user">
                                     <div class="wid-u-info">
-                                        <h4 class="m-t-0 m-b-5 font-600"> Michael Z.</h4>
-                                        <p class="text-muted m-b-5 font-13">michaelz@gmail.com</p>
-                                        <small class="text-warning"><b>(19) 0000-0000</b></small>
+                                        <h4 class="m-t-0 m-b-5 font-600"><?php echo utf8_encode($valor->nomeAnimal) ?></h4>
+                                        <p class="text-muted m-b-5 font-13"><?php echo utf8_encode($valor->tipo) ?></p>
+                                        <small class="text-warning"><b><a href="../?pagina=interna-anuncio&CodAnimal=<?php echo $valor->idAnimal?>">Ver anúncio</a></b></small>
                                     </div>
                                 </div>
                             </div>
                         </div><!-- end col -->
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card-box widget-user">
-                                <div>
-                                    <img src="view/assets/images/users/avatar-1.jpg" class="img-responsive img-circle" alt="user">
-                                    <div class="wid-u-info">
-                                        <h4 class="m-t-0 m-b-5 font-600">Marcelo M.</h4>
-                                        <p class="text-muted m-b-5 font-13">marcelom@gmail.com</p>
-                                        <small class="text-warning"><b>(19) 0000-0000</b></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card-box widget-user">
-                                <div>
-                                    <img src="view/assets/images/users/avatar-10.jpg" class="img-responsive img-circle" alt="user">
-                                    <div class="wid-u-info">
-                                        <h4 class="m-t-0 m-b-5 font-600">Bruno S.</h4>
-                                        <p class="text-muted m-b-5 font-13">brunos@gmail.com</p>
-                                        <small class="text-warning"><b>(19) 0000-0000</b></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                        
+                        <?php endforeach;?>
                     </div>
                     <!-- end row -->
 
