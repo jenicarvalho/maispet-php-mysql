@@ -52,6 +52,14 @@ abstract class Dao extends DB {
 		return $stmt->fetchAll();
 	}
 
+	
+	//deleta o item
+	public function deleteAllCustom($id) {
+		$sql = "DELETE FROM $this->table WHERE idProprietario = :id";
+		$stmt->bindParam(':idProprietario', $id, PDO::PARAM_INT);
+		$stmt = DB::prepare($sql);
+		return $stmt->execute();
+	}
 
 	//deleta o item
 	public function delete($id) {

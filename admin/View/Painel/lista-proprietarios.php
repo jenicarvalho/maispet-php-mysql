@@ -21,6 +21,12 @@ require_once($caminhoUrl."/Controller/ProprietariosController.php");
 require_once($caminhoUrlAdm."/View/includes/head.php");
 
 $idproprietario = $_GET['id'];
+
+//deleta animais (esse foi o unico jeito)
+$connect = mysqli_connect("localhost", "root", "", "maispet");
+$query = "DELETE FROM animal WHERE idProprietario = '$idproprietario' ";
+$result = mysqli_query($connect, $query);
+
 $resultadoProprietario = $proprietario->find($idproprietario);
 ?>
 
