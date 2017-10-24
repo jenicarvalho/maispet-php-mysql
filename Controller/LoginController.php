@@ -34,6 +34,17 @@ if( isset($_POST['fazerLogin']) ) {
     endif;
 }
 
+if(isset($_GET['recuperaSenha']) && $_GET['recuperaSenha'] == true) {
+
+    $message = ''
+    $email = mail('jeniffer@agenciapixels.com', 'Recuperação de senha', 'Sua senha é:');
+
+    if($email) {
+        echo 'senha enviada!';
+    }else{
+        echo 'senha errada';
+    }
+}
 
 //Logout
 if (isset($_GET['logout']) == true) {
