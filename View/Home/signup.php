@@ -75,7 +75,7 @@
                   <label for="job_title">Confirmar Senha</label>
                   <div class="field">
                     <input type="password" class="form-control" name="pass2" id="pass2" onkeyup="validarSenha()" placeholder="" value=""/>
-                   <span id="resultado">&nbsp;</span>
+                    <span id="resultado">&nbsp;</span>
                   </div>
                 </fieldset>
                 
@@ -136,9 +136,33 @@
                       <label for="job_type">Estado</label>
                       <div class="field select-style">
                         <select name="state" id="job_type" class="form-control">
-                          <option value="SP">SP</option>
-                          <option value="RJ">RJ</option>
+                          <option value="AC">AC</option>
+                          <option value="AL">AL</option>
+                          <option value="AP">AP</option>
+                          <option value="AM">AM</option>
+                          <option value="BA">BA</option>
+                          <option value="CE">CE</option>
+                          <option value="DF">DF</option>
+                          <option value="ES">ES</option>
+                          <option value="GO">GO</option>
+                          <option value="MA">MA</option>
+                          <option value="MT">MT</option>
+                          <option value="MS">MS</option>
                           <option value="MG">MG</option>
+                          <option value="PA">PA</option>
+                          <option value="PB">PB</option>
+                          <option value="PR">PR</option>
+                          <option value="PE">PE</option>
+                          <option value="PI">PI</option>
+                          <option value="RJ">RJ</option>
+                          <option value="RN">RN</option>
+                          <option value="RS">RS</option>
+                          <option value="RO">RO</option>
+                          <option value="RR">RR</option>
+                          <option value="SC">SC</option>
+                          <option value="SP">SP</option>
+                          <option value="SE">SE</option>
+                          <option value="TO">TO</option>
                         </select>
                       </div>
                     </fieldset>
@@ -156,7 +180,7 @@
                 <fieldset class="fieldset-job_title">
                   <label for="job_title">Telefone</label>
                   <div class="field">
-                    <input type="text" id="tel" class="form-control" name="phone" placeholder="" value=""/>
+                    <input type="text" id="tel" class="form-control" name="phoneHouse" placeholder="" value=""/>
                   </div>
                 </fieldset>
 

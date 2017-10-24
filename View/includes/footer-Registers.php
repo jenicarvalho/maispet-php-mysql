@@ -121,26 +121,26 @@
   </div>
 
 
-	
-	
-	<!-- Javascript Files
-	================================================== -->
-	<script src="assets/vendor/jquery-1.11.0.min.js"></script>
+  
+  
+  <!-- Javascript Files
+  ================================================== -->
+  <script src="assets/vendor/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="assets/vendor/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/vendor/jquery.mask.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
       $('#campoData').mask('00/00/0000');
-    });
-    
+    })
+
    $(document).ready(function(){
       $('#cpf').mask('000.000.000-00');
-    });
-   
+    })
+
    $(document).ready(function(){
       $('#tel').mask('(00)0000-0000');
-    });
-   
+    })
+
    $(document).ready(function(){
       $('#cel').mask('(00)00000-0000');
     })
@@ -149,7 +149,7 @@
     function validarSenha() {
       var campo1 = document.getElementById('pass').value;
       var campo2 = document.getElementById('pass2').value;
-   +
+
       if (campo1 == campo2) {
         document.getElementById('resultado').style.color = "#00913d";
         document.getElementById('resultado').innerHTML = "As Senhas são iguais";
@@ -162,42 +162,41 @@
   <script type="text/javascript" src="assets/vendor/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/vendor/bootstrap-notify.min.js"></script>
   <script src="assets/vendor/jquery.flexnav.min.js"></script>
+  <script src="assets/vendor/jquery.hoverIntent.minified.js"></script>
+  <script src="assets/vendor/jquery.flickrfeed.js"></script>
+  <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope/jquery.imagesloaded.min.js"></script>
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+  <script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/jquery.fitvids.js"></script>
+  <script src="assets/vendor/jquery.appear.js"></script>
+  <script src="assets/vendor/jquery.stellar.min.js"></script>
+  <script src="assets/vendor/flexslider/jquery.flexslider-min.js"></script>
 
-	<script src="assets/vendor/jquery.hoverIntent.minified.js"></script>
-	<script src="assets/vendor/jquery.flickrfeed.js"></script>
-	<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/isotope/jquery.imagesloaded.min.js"></script>
-	<script src="assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
-	<script src="assets/vendor/owl-carousel/owl.carousel.min.js"></script>
-	<script src="assets/vendor/jquery.fitvids.js"></script>
-	<script src="assets/vendor/jquery.appear.js"></script>
-	<script src="assets/vendor/jquery.stellar.min.js"></script>
-	<script src="assets/vendor/flexslider/jquery.flexslider-min.js"></script>
+  <!-- Newsletter Form -->
+  <script src="assets/vendor/jquery.validate.js"></script>
+  <script src="assets/js/newsletter.js"></script>
 
-	<!-- Newsletter Form -->
-	<script src="assets/vendor/jquery.validate.js"></script>
-	<script src="assets/js/newsletter.js"></script>
+  <script src="assets/js/custom.js"></script>
 
-	<script src="assets/js/custom.js"></script>
-
-	<script>
-		jQuery(function($){
-			$('body').addClass('loading');
-		});
-		
-		$(window).load(function(){
-			$('.flexslider').flexslider({
-				animation: "fade",
-				controlNav: true,
-				directionNav: false,
-				prevText: "",
-				nextText: "",
-				start: function(slider){
-					$('body').removeClass('loading');
-				}
-			});
-		});
-	</script>
+  <script>
+    jQuery(function($){
+      $('body').addClass('loading');
+    });
+    
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "fade",
+        controlNav: true,
+        directionNav: false,
+        prevText: "",
+        nextText: "",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
 
   <script>
   </script>
@@ -207,10 +206,10 @@
   //Logout
   if (isset($_GET['logout']) == true) {
       unset($_SESSION['usuarioCliente']);
-      header('Location: ?pagina=login');
+      header('Location: http://localhost/maispet/?pagina=login');
   }
 
 ?>
-	
+  
 </body>
 </html>
