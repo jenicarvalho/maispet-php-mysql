@@ -126,7 +126,7 @@
   <!-- Javascript Files
   ================================================== -->
   <script src="assets/vendor/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="assets/vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/bootstrap.js"></script>
   <script type="text/javascript" src="assets/vendor/jquery.mask.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
@@ -159,7 +159,6 @@
       } 
     }
   </script>
-  <script type="text/javascript" src="assets/vendor/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/vendor/bootstrap-notify.min.js"></script>
   <script src="assets/vendor/jquery.flexnav.min.js"></script>
   <script src="assets/vendor/jquery.hoverIntent.minified.js"></script>

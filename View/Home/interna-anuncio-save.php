@@ -144,7 +144,7 @@
 								
 									<?php if ( isset($_SESSION['usuarioCliente']) ) : ?>
 
-										<a href="#bsModal1" class="btn btn-warning btn-lg"  data-toggle="modal" data-target="#bsModal1"><span class="fa fa-envelope"></span> Notificar Contato</a>
+										<a class="btn btn-warning btn-lg"  data-toggle="modal" data-target="#bsModal1"><span class="fa fa-envelope"></span> Notificar Contato</a>
 									<?php else : ?>
 
 				                      <div class="alert alert-danger alert-dismissable">
@@ -236,7 +236,7 @@
 								<div class="comentario-animal">
 									
 									<form action="" method="post">
-										<textarea name="depoimento-texto" id="" cols="30" rows="6" class="form-control" placeholder="Digite aqui o seu comentário" required></textarea> <br>
+										<textarea name="depoimento-texto" id="" cols="30" rows="6" class="form-control" placeholder="Digite aqui o seu comentário"></textarea> <br>
 
 										<input type="submit" class="btn btn-success" value="Adicionar Comentário" name="envia-depoimento">
 
