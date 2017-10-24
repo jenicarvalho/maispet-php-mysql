@@ -1,25 +1,25 @@
         <!-- jQuery  -->
-        <script src="view/assets/js/jquery.min.js"></script>
-        <script src="view/assets/js/bootstrap.min.js"></script>
-        <script src="view/assets/js/detect.js"></script>
-        <script src="view/assets/js/fastclick.js"></script>
-        <script src="view/assets/js/jquery.slimscroll.js"></script>
-        <script src="view/assets/js/jquery.blockUI.js"></script>
-        <script src="view/assets/js/waves.js"></script>
-        <script src="view/assets/js/jquery.nicescroll.js"></script>
-        <script src="view/assets/js/jquery.scrollTo.min.js"></script>
-        <script src="view/assets/pages/jquery.inbox.js"></script>
+        <script src="View/assets/js/jquery.min.js"></script>
+        <script src="View/assets/js/bootstrap.min.js"></script>
+        <script src="View/assets/js/detect.js"></script>
+        <script src="View/assets/js/fastclick.js"></script>
+        <script src="View/assets/js/jquery.slimscroll.js"></script>
+        <script src="View/assets/js/jquery.blockUI.js"></script>
+        <script src="View/assets/js/waves.js"></script>
+        <script src="View/assets/js/jquery.nicescroll.js"></script>
+        <script src="View/assets/js/jquery.scrollTo.min.js"></script>
+        <script src="View/assets/pages/jquery.inbox.js"></script>
 
         <!--form validation init-->
-        <script src="view/assets/plugins/summernote/dist/summernote.min.js"></script>
+        <script src="View/assets/plugins/summernote/dist/summernote.min.js"></script>
 
         <!-- Modal-Effect -->
-        <script src="view/assets/plugins/custombox/dist/custombox.min.js"></script>
-        <script src="view/assets/plugins/custombox/dist/legacy.min.js"></script>
+        <script src="View/assets/plugins/custombox/dist/custombox.min.js"></script>
+        <script src="View/assets/plugins/custombox/dist/legacy.min.js"></script>
 
         <!-- App js -->
-        <script src="view/assets/js/jquery.core.js"></script>
-        <script src="view/assets/js/jquery.app.js"></script>
+        <script src="View/assets/js/jquery.core.js"></script>
+        <script src="View/assets/js/jquery.app.js"></script>
 
 
      <script>

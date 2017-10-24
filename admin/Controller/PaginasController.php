@@ -9,7 +9,7 @@ class PaginasController
 
     public function Login()
     {
-        include "View/Home/Login.php";
+        include "View/Home/login.php";
     }
 
     public function Painel()

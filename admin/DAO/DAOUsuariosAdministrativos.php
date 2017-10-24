@@ -6,8 +6,9 @@
  * 	Usage: Dao de usuarios adm que extende dao
  */
 
-require_once 'DAO/DAO.php';
-
+  $caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
+  require_once($caminhoUrlAdm."/DAO/DAO.php");
+  
 class DAOUsuariosAdministrativos extends Dao {
 
 	public $table = "usuario";

@@ -6,7 +6,8 @@
  * 	Usage: cria crud do sistema
  */
 
-require_once 'DB.php';
+$caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
+require_once($caminhoUrlAdm."/DAO/DB.php");
 
 abstract class Dao extends DB {
 

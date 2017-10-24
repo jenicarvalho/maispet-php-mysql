@@ -10,10 +10,6 @@
 
   $proprietario = new Proprietarios();
 
-  require_once($caminhoUrl."/Model/Animais.php");
-
-  $animais = new Animais();
-
 //cadastra
 if( isset($_POST['cadastrar']) && $_POST['nome'] != ""):
 
@@ -91,21 +87,9 @@ endif;
 if( isset($_GET['acao']) &&  $_GET['acao'] == 'deletar' ) :
 
   $id = (int)$_GET['id'];
-
-  //deleta animais
-  $connect = mysqli_connect("localhost", "root", "", "maispet");
-  $query = "DELETE FROM animal WHERE idProprietario = '$id' ";
-  $result = mysql_query($connect, $query);
-
-  echo $query;
-
-  echo $result;
-
   if( $proprietario->delete( $id )) {
     return $successDelete = true;
   }
 endif;
-
-
 
 ?>

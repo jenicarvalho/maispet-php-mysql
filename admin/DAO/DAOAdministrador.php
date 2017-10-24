@@ -6,7 +6,8 @@
  * 	Usage: Dao de administrador que extende dao
  */
 
-require_once 'DAO/DAO.php';
+$caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
+require_once($caminhoUrlAdm."/DAO/DAO.php");
 
 class DAOAdministrador extends Dao {
 

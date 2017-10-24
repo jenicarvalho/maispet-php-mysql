@@ -6,7 +6,8 @@
  * 	Usage: conecta ao banco de dados
  */
 
-require_once 'config.php';
+  $caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
+  require_once($caminhoUrlAdm."/DAO/config.php");
 
 class DB {
 
