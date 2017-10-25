@@ -34,15 +34,13 @@ if( isset($_POST['fazerLogin']) ) {
     endif;
 }
 
-if(isset($_GET['recuperaSenha']) && $_GET['recuperaSenha'] == true) {
+if(isset($_GET['novaSenha'])) {
 
     $message = '';
     $email = mail('jeniffer@agenciapixels.com', 'Recuperação de senha', 'Sua senha é:');
 
     if($email) {
-        echo 'senha enviada!';
-    }else{
-        echo 'senha errada';
+        $envioEmail = true;
     }
 }
 

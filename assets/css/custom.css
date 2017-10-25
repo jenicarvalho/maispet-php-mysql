@@ -11,3 +11,9 @@
 .comentarios .testimonial {
 	margin: 0 10px 30px;
 }
+
+.img-animal {
+    background-size: cover;
+    height: 250px;
+    display: block;
+}

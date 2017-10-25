@@ -32,7 +32,33 @@
           <div class="row">
             <div class="col-md-8 col-sm-offset-2">  
 
-              <?php if(!isset($_GET['recuperaSenha']) && !$_GET['recuperaSenha'] == true) : ?>  
+              <?php if(isset($_GET['recuperaSenha'])) : ?>  
+
+              <div class="alert alert-info">
+                <strong>Digite seu e-mail abaixo</strong> um link de recuperação de senha será enviado.
+              </div>
+
+            <?php if($email) :?>
+
+              <div class="alert alert-success">
+                <strong>E-mail enviado</strong> cheque seu e-mail.
+              </div>
+
+            <?php endif; ?>
+
+              <div class="box">
+                <h3>Recuperar senha</h3>
+                <form method="POST" role="form" action="">
+                  <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" name="usuario" class="form-control">
+                  </div>
+                  <input type="submit"  class="btn btn-primary btn-inline"  name="novaSenha" value="Recuperar Senha">
+                </form>
+              </div> 
+
+            <?php else : ?>
+
               <div class="alert alert-info">
                 <strong>Não tem uma conta? <a href="?pagina=signup">Clique aqui</a></strong> e faça seu cadastro gratuito.
               </div>  
@@ -55,30 +81,7 @@
                   <button type="submit" class="btn btn-primary btn-inline"  name="fazerLogin">Entrar</button>&nbsp; &nbsp; &nbsp; 
                 </form>
               </div>
-
-            <?php else : ?>
-
-              <div class="alert alert-info">
-                <strong>Digite seu e-mail abaixo</strong> um link de recuperação de senha será enviado.
-              </div>
-
-            <?php if($email) :?>
-
-              <div class="alert alert-success">
-                <strong>E-mail enviado</strong> cheque seu e-mail.
-              </div>
-
-            <?php endif; ?>
-              <div class="box">
-                <h3>Recuperar senha</h3>
-                <form method="POST" role="form" action="">
-                  <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="text" name="usuario" class="form-control">
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-inline"  name="novaSenha">Recuperar Senha</button>&nbsp; &nbsp; &nbsp; 
-                </form>
-              </div>          
+         
 
             <?php endif; ?>
 
