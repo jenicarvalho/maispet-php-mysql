@@ -142,6 +142,7 @@
 
                 <p>
                   <input type="submit" name="atualizar" class="btn btn-primary" value="Alterar &rarr;" />
+                  <a href="?pagina=painel_perfil&acao=deletar&id=<?php echo utf8_encode($resultadoProprietario->id)?>"  class="btn btn-danger pull-right" title="Essa ação NÃO poderá ser desfeita!">Deletar Meu Perfil</a>
                 </p>
 
               </form>

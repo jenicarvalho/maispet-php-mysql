@@ -3,7 +3,7 @@
  *	Project: Mais Pet
  *	Created: 03/08
  *	User: Jeniffer Carvalho
- * 	Usage: cria classe com os dados dos usuarios admninistrativos
+ * 	Usage: cria classe com os dados dos usuarios
  */
 
 $caminhoUrl = $_SERVER['DOCUMENT_ROOT']."/maispet";

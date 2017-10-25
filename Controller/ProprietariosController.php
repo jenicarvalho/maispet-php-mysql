@@ -87,9 +87,22 @@ endif;
 if( isset($_GET['acao']) &&  $_GET['acao'] == 'deletar' ) :
 
   $id = (int)$_GET['id'];
+
+  //deleta animais (esse foi o unico jeito)
+  $connect = mysqli_connect("localhost", "root", "", "maispet");
+  $query = "DELETE FROM animal WHERE idProprietario = '$id' ";
+  $result = mysqli_query($connect, $query);
+
   if( $proprietario->delete( $id )) {
-    return $successDelete = true;
+?>
+    <?php unset($_SESSION['usuarioCliente']) ?>
+    <script>
+      alert("Usuário deletado!");
+      window.location.href = "?pagina=index";
+    </script>
+
+<?php  
   }
 endif;
-
 ?>
+
