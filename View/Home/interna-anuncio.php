@@ -291,6 +291,8 @@
 							<!-- / Animais Relacionados -->
 							
 							<br>
+
+            				<?php if ( isset($_SESSION['usuarioCliente']) ) : ?>
 							<!-- Denuncia -->						
 							<div class="call-to-action centered">
 								<div class="cta-txt">
@@ -327,6 +329,7 @@
 								</div>
 							</div>
 							<!-- / Denuncia -->
+							<?php endif; ?>
 						</div>
 
 						<?php

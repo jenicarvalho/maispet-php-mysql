@@ -48,11 +48,6 @@
                 <div class="user-box">
                     <h5><a href="#"><?php echo $resultadoUsuario->nome ?></a> </h5>
                     <ul class="list-inline">
-                        <li>
-                            <a href="#" >
-                                <i class="zmdi zmdi-settings"></i>
-                            </a>
-                        </li>
 
                         <li>
                             <a href="?logout=true" class="text-custom">
