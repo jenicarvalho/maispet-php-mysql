@@ -34,10 +34,22 @@ if( isset($_POST['fazerLogin']) ) {
     endif;
 }
 
-if(isset($_GET['novaSenha'])) {
+if(isset($_POST['novaSenha'])) {
+
+    $emailProprietario = $_POST['usuario'];
+
+    $headers = "Content-type: text/html; charset=iso-8859-1\r\n";
+
+    $dadosProprietario = $loginProprietario->findAllCustom("WHERE email = '$emailProprietario' "); 
+
+    $senha = $dadosProprietario->id . $dadosProprietario->senha;
+
+    $msg = "Clique no link para resetar sua senha: <br> <a href='http://jenicarvalho.com.br/maispet/?pagina=resetarSenha&hash=$senha '>resetar minha senha</a>.";
+
+    $assunto = '=?UTF-8?B?'.base64_encode('Recuperação de senha').'?=';
 
     $message = '';
-    $email = mail('jeniffer@agenciapixels.com', 'Recuperação de senha', 'Sua senha é:');
+    $email = mail('jeniffer@agenciapixels.com', $assunto, $msg, $headers) ;
 
     if($email) {
         $envioEmail = true;
@@ -46,5 +58,12 @@ if(isset($_GET['novaSenha'])) {
 
 //Logout
 if (isset($_GET['logout']) == true) {
-    unset($_SESSION['usuarioCliente']);
-}
+?>
+    <?php unset($_SESSION['usuarioCliente']) ?>
+    <script>
+      window.location.href = "?pagina=index";
+    </script>
+
+<?php  
+  }
+?>

@@ -11,11 +11,23 @@ $caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
 $caminhoUrl = $_SERVER['DOCUMENT_ROOT']."/maispet";
 
 
-if ( isset($_SESSION['usuarioADM']) ) : 
+if ( isset($_SESSION['Administrador']) ) : 
     $success = false;
+    $success2 = false;
     $successDelete = false;
-    
+
+    require_once($caminhoUrlAdm."/Model/Veterinario.php");
+    $veterinario = new Veterinarios();
+
+    require_once($caminhoUrlAdm."/Model/Funcionario.php");
+    $funcionario = new Funcionarios();
+
+    require_once($caminhoUrlAdm."/Model/Administrador.php");
+    $administrador = new Administradores();
+
     require_once($caminhoUrlAdm."/Model/UsuariosAdministrativos.php");
+    $UsuarioAdministrativo = new UsuariosAdministrativos;
+
     require_once($caminhoUrlAdm."/View/includes/head.php");
     require_once($caminhoUrlAdm."/Controller/UsuariosAdministrativos.php");
 ?>
@@ -62,20 +74,28 @@ if ( isset($_SESSION['usuarioADM']) ) :
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="card-box">
-                                <div class="dropdown pull-right">
-                                    <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="zmdi zmdi-more-vert"></i>
-                                    </a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Ir para o site</a></li>
-                                    </ul>
-                                </div>
-
 
                                 <?php
-                                    if(isset($_GET['acao']) &&  $_GET['acao'] == 'editar') : 
-                                        $id = (int)$_GET['id'];
-                                        $resultado = $usuarioAdm->find($id);
+                                    if(isset($_POST['acao']) &&  $_POST['acao'] == 'editar') : 
+
+                                        $funcao = $_POST['funcao'];
+                                        $id = (int)$_POST['id'];
+                                        $loginUsuario = $_POST['login'];
+                                        $senhaUsuario = $_POST['senha'];
+                                        $idLogin = $_POST['idLogin'];
+
+
+                                        if($funcao == 'administrador') {
+                                          $resultado = $administrador->find($id);
+                                        }
+
+                                        if($funcao == 'veterinario') {
+                                          $resultado = $veterinario->find($id);
+                                        }
+
+                                        if($funcao == 'funcionario') {
+                                          $resultado = $funcionario->find($id);
+                                        }
                                 ?>
                                 <h4 class="header-title m-t-0 m-b-30">Editar usuário</h4>
                                 <div class="row">
@@ -103,21 +123,18 @@ if ( isset($_SESSION['usuarioADM']) ) :
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Login</label>
                                                 <div class="col-md-10">
-                                                    <input type="text" class="form-control" required placeholder="Login" name="login"  value="<?php echo $resultado->login ?>">
+                                                    <input type="text" class="form-control" required placeholder="Login" name="login"  value="<?php echo $loginUsuario ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Senha</label>
                                                 <div class="col-md-10">
-                                                    <input type="password" class="form-control" required placeholder="*******" name="senha"  value="<?php echo $resultado->senha ?>">
+                                                    <input type="password" class="form-control" required placeholder="*******" name="senha"  value="<?php echo $senhaUsuario ?>">
+                                                    <input type="hidden" name="nivel" value="<?php echo $funcao ?>" >
+                                                    <input type="hidden" name="id" value="<?php echo $id ?>" >
+                                                    <input type="hidden" name="idLogin" value="<?php echo $idLogin ?>" >
                                                 </div>
                                             </div>
-
-                                            <?php if($success == true) : ?>
-
-                                            <p class='bg-success' style="margin-left: 100px; text-align: center; color: #fff" >Alteração realizada com Sucesso!</p>
-
-                                            <?php endif; ?>
 
                                             <button style="margin-left: 100px" type="submit" class="btn btn-purple waves-effect waves-light" name="atualizar">Atualizar</button>
                                         </form>
@@ -125,40 +142,76 @@ if ( isset($_SESSION['usuarioADM']) ) :
                                 </div><!-- end row -->  
                                 <?php  else :?>  
 
+
+                                <?php if($success2 == true) : ?>
+
+                                  <div class="alert alert-success alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                                    <strong>Alteração Realizada!</strong>
+                                  </div>
+
+                                <?php endif; ?>
                                 <h4 class="header-title m-t-0 m-b-30">Todos os usuarios cadastrados</h4>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="table-responsive"> 
                                           <table class="table table-striped m-0"> 
                                           <thead> 
-                                            <tr> 
-                                              <th>#</th> 
+                                            <tr>  
                                               <th>Nome</th> 
                                               <th>E-mail</th> 
                                               <th>CPF</th>   
+                                              <th>Função</th>   
                                               <th>Login</th>   
                                               <th>Ações</th>  
                                           </tr> 
                                           </thead> 
                                           <tbody> 
-                                            <?php foreach( $usuarioAdm->findAll() as $key => $valor) : ?>
+                                            <?php foreach( $UsuarioAdministrativo->findAll() as $key => $valor) : ?>
+                                            <?php
+                                                /*-- Funcionario --*/
+                                                if ($valor->idFuncionario == 1) {
+                                                    $usuarioAtual = $funcionario->find($valor->idLogin);
+                                                    $cargo = "funcionario";
+                                                }
+                                                /*-- Veterinario --*/
+                                                if ($valor->idVeterinario == 1) {
+                                                    $usuarioAtual = $veterinario->find($valor->idLogin);
+                                                    $cargo = "veterinario";
+                                                }
+                                                /*-- Administrador --*/
+                                                if ($valor->idAdministrador == 1) {
+                                                    $usuarioAtual = $administrador->find($valor->idLogin);
+                                                    $cargo = "administrador";
+                                                }
+                                              ?>
                                              <tr> 
-                                               <th scope="row"><?php echo $valor->id; ?></th> 
-                                               <td><?php echo $valor->nome ?> </td> 
-                                               <td><?php echo $valor->email?> </td>
-                                               <td><?php echo $valor->cpf?> </td>
-                                               <td><?php echo $valor->login?> </td>
+                                               <td><?php echo $usuarioAtual->nome ?> </td> 
+                                               <td><?php echo $usuarioAtual->email?> </td>
+                                               <td><?php echo $usuarioAtual->cpf?> </td>
+                                               <td><?php echo $cargo ?> </td>
+                                               <td><?php echo $valor->login ?> </td>
                                                <td>
-                                                    <a href="?pagina=administrativos&acao=editar&id=<?php echo $valor->id ?>">Editar </a> |
-
-                                                    <a href="?pagina=administrativos&acao=deletar&id=<?php echo $valor->id ?>" > Deletar</a>
+                                                <form action="?pagina=administrativos" method="post">
+                                                  <input type="hidden" name="id" value="<?php echo $valor->idLogin ?>">
+                                                  <input type="hidden" name="funcao" value="<?php echo $cargo?>">
+                                                  <input type="hidden" name="acao" value="editar">
+                                                  <input type="hidden" name="login" value="<?php echo $valor->login ?>">
+                                                  <input type="hidden" name="senha" value="<?php echo $valor->senha ?>">
+                                                  <input type="hidden" name="idLogin" value="<?php echo $valor->idLogin ?>" >
+                                                  <input type="submit" class="btn brn-primary" value="Editar">
+                                                </form> 
+                                                    <a class="btn btn-danger" href="?pagina=administrativos&acao=deletar&id=<?php echo $valor->id ?>" > Deletar</a>
                                                </td> 
                                              </tr> 
                                            <?php endforeach;?>
 
                                            <?php if($successDelete == true) : ?>
-                                          
-                                           <p class='bg-success' style="text-align: center; color: #fff" >Deletado com Sucesso!</p>
+
+                                              <div class="alert alert-success alert-dismissable">
+                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                                                <strong>Deletado com Sucesso!</strong>
+                                              </div>                                          
 
                                            <?php endif; ?>
                                           </tbody> 
@@ -171,20 +224,24 @@ if ( isset($_SESSION['usuarioADM']) ) :
                             <div class="card-box">
                                 <h4 class="header-title m-t-0 m-b-30">Cadastrar Novo Administrador</h4>
                                 <div class="row">
+
                                   <?php if($success == true) : ?>
 
-                                  <p class='bg-success' style="text-align: center; color: #fff" >Inserido com Sucesso!</p>
+                                  <div class="alert alert-success alert-dismissable">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                                    <strong>Inserido com Sucesso!</strong>
+                                  </div>
 
                                   <?php endif; ?>
                                     <div class="col-lg-12">
                                         <form class="form" method="post">
                                           <div class="form-group">
                                             <label for="exampleInputName2">Nome</label>
-                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe" name="nome" required>
+                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Nome" name="nome" required>
                                           </div>
                                           <div class="form-group">
                                             <label for="exampleInputEmail2">Email</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com" name="email" required>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-mail" name="email" required>
                                           </div>
                                           <div class="form-group">
                                             <label for="exampleInputEmail2">CPF</label>
@@ -206,12 +263,12 @@ if ( isset($_SESSION['usuarioADM']) ) :
                                           <div class="form-group">
                                             <label for="exampleInputEmail2">Nível</label>
                                             <select name="nivel" class="form-control" required>
-                                                <option value="1">Administrador (Tem acesso total)</option>
-                                                <option value="2">Veterinário</option>
-                                                <option value="3">Assistente</option>
+                                                <option value="administrador">Administrador</option>
+                                                <option value="veterinario">Veterinário</option>
+                                                <option value="funcionario">Funcionário</option>
                                             </select>
                                           </div>
-                                          <button type="submit" class="btn btn-default" name="cadastrar">Enviar</button>
+                                          <button type="submit" class="btn btn-primary" name="cadastrarADM">Enviar</button>
                                         </form>
                                     </div><!-- end col -->
                                 </div>
@@ -231,6 +288,6 @@ if ( isset($_SESSION['usuarioADM']) ) :
 <?php else : ?>
 
     <script>alert("Você não tem acesso.");</script>
-    <meta http-equiv="refresh" content="0; url=?pagina=login">
+    <meta http-equiv="refresh" content="0; url=?pagina=painel">
 
 <?php endif; ?>

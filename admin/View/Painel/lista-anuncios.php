@@ -310,6 +310,6 @@ if ( isset($_SESSION['usuarioADM']) ) :
 <?php else : ?>
 
     <script>alert("Você não tem acesso.");</script>
-    <meta http-equiv="refresh" content="0; url=?pagina=login">
+    <meta http-equiv="refresh" content="0; url=?pagina=painel">
 
 <?php endif; ?>

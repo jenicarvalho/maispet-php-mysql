@@ -10,7 +10,7 @@
 $caminhoUrlAdm = $_SERVER['DOCUMENT_ROOT']."/maispet/admin";
 $caminhoUrl = $_SERVER['DOCUMENT_ROOT']."/maispet";
 
-if ( isset($_SESSION['usuarioADM']) ) : 
+if ( isset($_SESSION['Veterinario']) ) : 
 
 require_once($caminhoUrl."/Model/Intervencao.php");
 $intervencao = new Intervencao();
@@ -134,6 +134,6 @@ $resultadoProprietario = $intervencao->find($idproprietario);
 <?php else : ?>
 
     <script>alert("Você não tem acesso.");</script>
-    <meta http-equiv="refresh" content="0; url=?pagina=login">
+    <meta http-equiv="refresh" content="0; url=?pagina=painel">
 
 <?php endif; ?>

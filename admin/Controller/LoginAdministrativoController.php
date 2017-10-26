@@ -37,5 +37,8 @@ if( isset($_POST['fazerLogin']) ) {
 
 //Logout
 if (isset($_GET['logout']) == true) {
-    unset($_SESSION['usuario']);
+    unset($_SESSION['usuarioADM']);
+    unset($_SESSION['Veterinario']);
+    unset($_SESSION['Funcionario']);
+    unset($_SESSION['Administrador']);
 }

@@ -17,19 +17,22 @@
     //verifica qual nível do usuario logado
     
     /*-- Funcionario --*/
-    if ($_SESSION['usuarioADM']->idUsuario == 1) {
-        $idLogado = $_SESSION['usuarioADM']->idUsuario;
+    if ($_SESSION['usuarioADM']->idFuncionario == 1) {
+        $idLogado = $_SESSION['usuarioADM']->idLogin;
         $usuarioLogado = new Funcionarios();
+        $_SESSION['Funcionario'] = $usuarioLogado;
     }
     /*-- Veterinario --*/
     if ($_SESSION['usuarioADM']->idVeterinario == 1) {
-        $idLogado = $_SESSION['usuarioADM']->idVeterinario;
+        $idLogado = $_SESSION['usuarioADM']->idLogin;
         $usuarioLogado = new Veterinarios();
+        $_SESSION['Veterinario'] = $usuarioLogado;
     }
     /*-- Administrador --*/
     if ($_SESSION['usuarioADM']->idAdministrador == 1) {
-        $idLogado = $_SESSION['usuarioADM']->idAdministrador;
+        $idLogado = $_SESSION['usuarioADM']->idLogin;
         $usuarioLogado = new Administradores();
+        $_SESSION['Administrador'] = $usuarioLogado;
     }
 
     //guarda dados do usuario
@@ -64,6 +67,8 @@
                         <li>
                             <a href="?pagina=painel" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i> <span> Inicio </span> </a>
                         </li>
+
+                        <?php if (isset($_SESSION['Funcionario']) or isset($_SESSION['Veterinario'])) : ?>
                         <li>
                             <a href="?pagina=proprietarios" class="waves-effect"><i class="fa fa-user-circle"></i> <span>Proprietários</span> </a>
                         </li>
@@ -73,15 +78,22 @@
                         <li>
                             <a href="?pagina=perfis-denunciados" class="waves-effect"><i class="fa fa-user-times"></i> <span>Perfis Denunciados</span> </a>
                         </li>
+                        <?php endif; ?>
+
+                        <?php if ( isset($_SESSION['Veterinario']) ) : ?>
                         <li>
                             <a href="?pagina=intervencoes" class="waves-effect"><i class="fa  fa-medkit"></i> <span>Intervenções Solicitadas</span> </a>
                         </li>
                         <li>
                             <a href="?pagina=relatorios" class="waves-effect"><i class="fa  fa-line-chart"></i> <span>Relatórios</span> </a>
                         </li>
+                        <?php endif; ?>
+
+                        <?php if ( !isset($_SESSION['Funcionario']) and !isset($_SESSION['Veterinario'])) : ?>
                         <li>
-                            <a href="?pagina=administrativos" class="waves-effect"><i class="fa  user"></i> <span>Administradores</span> </a>
+                            <a href="?pagina=administrativos" class="waves-effect"><i class="fa  fa-user"></i> <span>Usuários Administrativos</span> </a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                     <div class="clearfix"></div>
                 </div>

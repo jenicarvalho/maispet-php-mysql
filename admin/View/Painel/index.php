@@ -165,7 +165,9 @@ $mesAtual = date('m');
 
 <?php else : ?>
 
-    <script>alert("Você não tem acesso.");</script>
-    <meta http-equiv="refresh" content="0; url=<?php echo $caminhoUrlAdm?>/?pagina=login">
+    <script>
+        alert("Você não tem acesso.");
+        window.location.href = "?pagina=login";
+    </script>
 
 <?php endif; ?>

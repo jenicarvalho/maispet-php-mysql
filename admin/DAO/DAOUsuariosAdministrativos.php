@@ -14,24 +14,26 @@ class DAOUsuariosAdministrativos extends Dao {
 	public $table = "usuario";
 
 	public function insert(){
-		$sql  = "INSERT INTO $this->table (nome, email, cpf, login, senha) VALUES (:nome, :email, :cpf, :login, :senha)";
+		$sql  = "INSERT INTO $this->table (login, senha, idFuncionario, idVeterinario, idAdministrador, idLogin) VALUES (:login, :senha, :idFuncionario, :idVeterinario, :idAdministrador, :idLogin)";
 		$stmt = DB::prepare($sql);
-		$stmt->bindParam(':nome', $this->nome);
-		$stmt->bindParam(':email', $this->email);
-		$stmt->bindParam(':cpf', $this->cpf);
 		$stmt->bindParam(':login', $this->login);
 		$stmt->bindParam(':senha', $this->senha);
+		$stmt->bindParam(':idFuncionario', $this->idFuncionario);
+		$stmt->bindParam(':idVeterinario', $this->idVeterinario);
+		$stmt->bindParam(':idAdministrador', $this->idAdministrador);
+		$stmt->bindParam(':idLogin', $this->idLogin);
 		return $stmt->execute(); 
 	 }
 
 	public function update($id){
-		$sql  = "UPDATE $this->table SET nome = :nome,  email = :email, cpf = :cpf, login = :login, senha = :senha WHERE id = :id";
+		$sql  = "UPDATE $this->table SET login = :login, senha = :senha, idFuncionario = :idFuncionario,  idVeterinario = :idVeterinario, idAdministrador = :idAdministrador, idLogin = :idLogin  WHERE id = :id";
 		$stmt = DB::prepare($sql);
-		$stmt->bindParam(':nome', $this->nome);
-		$stmt->bindParam(':email', $this->email);
-		$stmt->bindParam(':cpf', $this->cpf);
 		$stmt->bindParam(':login', $this->login);
 		$stmt->bindParam(':senha', $this->senha);
+		$stmt->bindParam(':idFuncionario', $this->idFuncionario);
+		$stmt->bindParam(':idVeterinario', $this->idVeterinario);
+		$stmt->bindParam(':idAdministrador', $this->idAdministrador);
+		$stmt->bindParam(':idLogin', $this->idLogin);
 		$stmt->bindParam(':id', $id);
 		return $stmt->execute();
 	}

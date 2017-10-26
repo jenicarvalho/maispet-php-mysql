@@ -38,7 +38,7 @@ abstract class Dao extends DB {
 		$sql = "SELECT * FROM $this->table $custom";
 		$stmt = DB::prepare($sql);
 		$stmt->execute();
-		return $stmt->fetchAll();
+		return $stmt->fetchAll(PDO::FETCH_OBJ);
 	}
 	
 	//deleta o item

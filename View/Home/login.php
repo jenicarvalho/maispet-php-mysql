@@ -4,7 +4,7 @@
     $caminhoUrl = $_SERVER['DOCUMENT_ROOT']."/maispet";
 
     require_once($caminhoUrl."/View/includes/header.php");
-    $email = false;
+    $envioEmail = false;
     require_once($caminhoUrl."/Controller/LoginController.php");
 ?>
 
@@ -32,13 +32,8 @@
           <div class="row">
             <div class="col-md-8 col-sm-offset-2">  
 
-              <?php if(isset($_GET['recuperaSenha'])) : ?>  
 
-              <div class="alert alert-info">
-                <strong>Digite seu e-mail abaixo</strong> um link de recuperação de senha será enviado.
-              </div>
-
-            <?php if($email) :?>
+            <?php if($envioEmail == true) :?>
 
               <div class="alert alert-success">
                 <strong>E-mail enviado</strong> cheque seu e-mail.
@@ -46,6 +41,11 @@
 
             <?php endif; ?>
 
+              <?php if(isset($_GET['recuperaSenha'])) : ?>  
+
+              <div class="alert alert-info">
+                <strong>Digite seu e-mail abaixo</strong> um link de recuperação de senha será enviado.
+              </div>
               <div class="box">
                 <h3>Recuperar senha</h3>
                 <form method="POST" role="form" action="">

@@ -17,25 +17,6 @@ class UsuariosAdministrativos extends DAOUsuariosAdministrativos {
 	public $login;
 	public $senha;
 
-	public function setNome($nome){
-		$this->nome = $nome;
-	}
-
-	public function getNome(){
-		return $this->nome;
-	}
-
-	public function setEmail($email){
-		$this->email = $email;
-	}
-
-	public function setCpf($cpf){
-		$this->cpf = $cpf;
-	}
-
-	public function getCpf(){
-		return $this->cpf;
-	}
 
 	public function setLogin($login){
 		$this->login = $login;
@@ -53,4 +34,35 @@ class UsuariosAdministrativos extends DAOUsuariosAdministrativos {
 		return $this->senha;
 	}
 
+	public function setIdFuncionario($idFuncionario) {
+		$this->idFuncionario = $idFuncionario;
+	}
+
+	public function getIdFuncionario() {		
+		return $this->idFuncionario;
+	}
+
+	public function setIdVeterinario($idVeterinario) {
+		$this->idVeterinario = $idVeterinario;
+	}
+
+	public function getIdVeterinario() {		
+		return $this->idVeterinario;
+	}
+
+	public function setIdAdministrador($idAdministrador) {
+		$this->idAdministrador = $idAdministrador;
+	}
+
+	public function getIdAdministrador() {		
+		return $this->idAdministrador;
+	}
+
+	public function setIdLogin($idLogin) {
+		$this->idLogin = $idLogin;
+	}
+
+	public function getIdLogin() {		
+		return $this->idLogin;
+	}
 }
