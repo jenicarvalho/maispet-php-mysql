@@ -4,9 +4,9 @@
 //export.php  
 $connect = mysqli_connect("localhost", "jeni", "*fran6446", "jeni_maispet");
 $output = '';
- $query = "SELECT * FROM animal";
- $result = mysqli_query($connect, $query);
- if(mysqli_num_rows($result) > 0)
+$query = "SELECT * FROM animal";
+$result = mysqli_query($connect, $query);
+if(mysqli_num_rows($result) > 0)
  {
   $output .= '
    <table class="table" bordered="1">  

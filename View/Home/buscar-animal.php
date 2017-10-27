@@ -3,7 +3,8 @@
 
     require_once($caminhoUrl."/View/includes/header.php");
 
-    $objAnimalBusca = false;
+    $buscaQuery = false;
+    $buscaQuerySidebar = false;
     require_once($caminhoUrl."/Controller/AnimaisController.php");
 
     require_once($caminhoUrl."/Model/Animais.php");
@@ -11,10 +12,6 @@
 
     require_once($caminhoUrl."/Model/Proprietarios.php");
     $proprietario = new Proprietarios();
-
-    // echo '<pre>';
-    // var_dump($objAnimalBusca);
-    // echo '</pre>';
 ?>
 
 		<!-- Main -->
@@ -47,23 +44,31 @@
 			                <h2 class="with-subtitle" data-animation="fadeInUp" data-animation-delay="0">Últimos Animais <small data-animation="fadeInUp" data-animation-delay="100">Confira os animais que recém chegaram!</small></h2>
 			                <div class="row">
 
-                  			<?php foreach( $objAnimalBusca as $key => $valor) : ?>
+                  			<?php 
 
-                  			<?php $nomeProprietario = $proprietario->find(utf8_encode($valor->idProprietario))?>
+                  				if($buscaQuerySidebar == true) {
+                  					$buscaQuery = $buscaQuerySidebar;
+                  				}
+                  				if(mysqli_num_rows($buscaQuery) > 0) : 
+                  				
+                  				while($objBusca = mysqli_fetch_array($buscaQuery)) :
+                  			?>
+							
+                  			<?php $nomeProprietario = $proprietario->find(utf8_encode($objBusca['idProprietario']))?>
 
 			                  <div class="col-xs-12 col-sm-6 col-md-4" data-animation="fadeInLeft" data-animation-delay="0">
 			                    <div class="job-listing-box">
 			                      <figure class="job-listing-img">
-			                        <a href="?pagina=interna-anuncio&CodAnimal=<?php echo utf8_encode($valor->idAnimal)?>"><img src="uploads/animais/<?php echo utf8_encode($valor->fotoAnimal) ?>" alt="<?php echo utf8_encode($valor->nomeAnimal) ?>"></a>
+			                        <a href="?pagina=interna-anuncio&CodAnimal=<?php echo utf8_encode($objBusca['idAnimal'])?>"><img src="uploads/animais/<?php echo utf8_encode($objBusca['fotoAnimal']) ?>" alt="<?php echo utf8_encode($objBusca['nomeAnimal']) ?>"></a>
 			                      </figure>
 			                      <div class="job-listing-body">
-			                        <h4 class="name"><a href="?pagina=interna-anuncio&CodAnimal=<?php echo utf8_encode($valor->idAnimal)?>"><?php echo utf8_encode($valor->nomeAnimal) ?></a></h4>
+			                        <h4 class="name"><a href="?pagina=interna-anuncio&CodAnimal=<?php echo utf8_encode($objBusca['idAnimal'])?>"><?php echo utf8_encode($objBusca['nomeAnimal']) ?></a></h4>
 			                        <p>			                        	
-			                        	<?php echo utf8_encode($valor->tipo) ?>, 
-			                        	<?php echo utf8_encode($valor->sexo) ?>, 
-			                        	<?php echo utf8_encode($valor->data_nascimento) ?>, 
-			                        	<?php echo utf8_encode($valor->cor) ?>, 
-			                        	<?php echo utf8_encode($valor->porte) ?>
+			                        	<?php echo utf8_encode($objBusca['tipo']) ?>, 
+			                        	<?php echo utf8_encode($objBusca['sexo']) ?>, 
+			                        	<?php echo utf8_encode($objBusca['data_nascimento']) ?>, 
+			                        	<?php echo utf8_encode($objBusca['cor']) ?>, 
+			                        	<?php echo utf8_encode($objBusca['porte']) ?>
 			                        	
 			                        </p>
 			                      </div>
@@ -76,7 +81,15 @@
 			                    </div>
 			                  </div>
 
-                 			<?php endforeach;?>
+                 			<?php endwhile;?>
+
+                 			
+                 			<?php else : ?>
+                 				
+                 				<h3>Desculpe! Não há animais para a sua pesquisa.</h3>
+
+                 			<?php endif;?>
+
 
 			                </div>
 			              </div>

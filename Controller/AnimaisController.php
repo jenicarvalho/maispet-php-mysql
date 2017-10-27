@@ -145,9 +145,28 @@ endif;
     $animal_sexo = utf8_decode($_POST['animal_sexo']);
     $animal_cor = utf8_decode($_POST['animal_cor']);
 
-    if ($animal->buscaHome($animal_tipo, $animal_idade, $animal_sexo , $animal_cor)) {
-      return $objAnimalBusca = $animal->buscaHome($animal_tipo, $animal_idade, $animal_sexo, $animal_cor);
-    }
+    $connect = mysqli_connect("localhost", "root", "", "maispet");
+    $query = "SELECT * FROM animal WHERE tipo = '$animal_tipo' and data_nascimento = '$animal_idade' and sexo = '$animal_sexo' and cor = '$animal_cor' ";
+    
+    return $buscaQuery = mysqli_query($connect, $query);
+
   endif;
 
+  //busca 
+  if(isset($_POST['animal-busca-sidebar']) && $_POST['animal-busca-sidebar'] != ""  ) :
+
+    $animal_tipo = utf8_decode($_POST['animal_tipo']);
+    $animal_idade = utf8_decode($_POST['animal_idade']);
+    $animal_sexo = utf8_decode($_POST['animal_sexo']);
+    $animal_cor = utf8_decode($_POST['animal_cor']);
+    $animal_porte = utf8_decode($_POST['animal_porte']);
+    $animal_raca = utf8_decode($_POST['animal_raca']);
+
+    $connect = mysqli_connect("localhost", "root", "", "maispet");
+    $query = "SELECT * FROM animal WHERE tipo = '$animal_tipo' and data_nascimento = '$animal_idade' and sexo = '$animal_sexo' and cor = '$animal_cor' and porte = '$animal_porte' and raca = '$animal_raca' ";
+
+    
+    return $buscaQuerySidebar = mysqli_query($connect, $query);
+
+  endif;
 ?>
