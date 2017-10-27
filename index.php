@@ -43,6 +43,11 @@ switch($pagina) {
     case "buscar-animal" :
     $ctrl->buscarAnimal();
     break;
+    
+    case "prontopet" :
+    $ctrl->mostraProntopet();
+    break;
+
 
 
     // Painel

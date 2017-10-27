@@ -145,7 +145,7 @@ endif;
     $animal_sexo = utf8_decode($_POST['animal_sexo']);
     $animal_cor = utf8_decode($_POST['animal_cor']);
 
-    $connect = mysqli_connect("localhost", "root", "", "maispet");
+    $connect = mysqli_connect("localhost", "jeni", "*fran6446", "jeni_maispet");
     $query = "SELECT * FROM animal WHERE tipo = '$animal_tipo' and data_nascimento = '$animal_idade' and sexo = '$animal_sexo' and cor = '$animal_cor' ";
     
     return $buscaQuery = mysqli_query($connect, $query);
@@ -162,7 +162,7 @@ endif;
     $animal_porte = utf8_decode($_POST['animal_porte']);
     $animal_raca = utf8_decode($_POST['animal_raca']);
 
-    $connect = mysqli_connect("localhost", "root", "", "maispet");
+    $connect = mysqli_connect("localhost", "jeni", "*fran6446", "jeni_maispet");
     $query = "SELECT * FROM animal WHERE tipo = '$animal_tipo' and data_nascimento = '$animal_idade' and sexo = '$animal_sexo' and cor = '$animal_cor' and porte = '$animal_porte' and raca = '$animal_raca' ";
 
     

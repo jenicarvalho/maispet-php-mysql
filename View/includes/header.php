@@ -130,7 +130,7 @@
             <li><a href="?pagina=index">Início</a></li>
             <li><a href="?pagina=lista-animais">Ver todos os animais</a></li>
             <li><a href="?pagina=profissionais">Profissionais</a></li>
-            <li><a href="?pagina=mantenedora">Quem Somos?</a></li>
+            <li><a href="?pagina=mantenedora">Quem Somos</a></li>
             <li><a href="?pagina=prontopet">Pronto Pet</a></li>
             <li><a href="?pagina=contato">Fale Conosco</a></li>
             <?php if ( isset($_SESSION['usuarioCliente']) ) : ?>

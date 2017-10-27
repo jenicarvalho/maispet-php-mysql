@@ -83,20 +83,6 @@
 											</div>
 										</div>
 									</div>
-									<div class="panel panel-default">
-										<div class="panel-heading">
-											<h4 class="panel-title">
-												<a data-toggle="collapse" data-parent="#accordion" href="#accordion-3" class="collapsed">
-													Classificação dos animais
-												</a>
-											</h4>
-										</div>
-										<div id="accordion-3" class="panel-collapse collapse">
-											<div class="panel-body">
-												<p>Nosso sistema permite também a avaliação dos animais, por parte dos proprietários que já tiveram contato com aquele pet, dando mais segurança na escolha do futuro(a) parceiro(a) do seu Pet.</p>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
