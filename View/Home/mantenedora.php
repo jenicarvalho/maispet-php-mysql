@@ -7,12 +7,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<h1>Sobre nós</h1>
+							<h1>Quem Somos?</h1>
 						</div>
 						<div class="col-md-6">
 							<ul class="breadcrumb">
 								<li><a href="?pagina=index">Inicial</a></li>
-								<li class="active">Sobre nós</li>
+								<li class="active">Quem Somos?</li>
 							</ul>
 						</div>
 					</div>
@@ -25,22 +25,34 @@
 				<div class="container">
 					
 					<div class="row">
-						<div class="col-md-6">
-							<figure class="alignnone">
-								<img src="http://placehold.it/558x320" alt="">
-							</figure>
-						</div>
-						<div class="col-md-6">
+						<div class="col-md-12 col-sm-12">
 							<h2>Bem vindo ao Mais Pet!</h2>
-							<p>Nosso serviço foi desenvolvido pensando em você. Queremos ser a solução definitiva como ferramenta de busca de animais domésticos para reprodução. Aqui você encontra todas as informações que precisa para encontrar o parceiro(a) ideal para o seu Pet.
+							<p>Nosso serviço foi desenvolvido pensando em você. Queremos ser a solução definitiva como ferramenta de busca de animais domésticos para reprodução. Aqui você encontra todas as informações que precisa para encontrar o parceiro(a) ideal para o seu Pet.</p>
 							<div class="spacer-sm"></div>
-							
+						</div>
+					</div>
 
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<h2>Missão</h2>
+							<p>Nossa missão é prover um serviço integro, de qualidade e confiança onde donos de Pet encontrem relações saudáveis para seus pets de estimação.</p>
+							<div class="spacer-sm"></div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<h2>Visão</h2>
+							<p>Se tornar o maior sistema para encontro e relacionamento de pets de estimação à nível nacional, e futuramente alcançar os mesmos objetivos em dispositivos móveis.</p>
+							<div class="spacer-sm"></div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<h2>Valores</h2>
+							<p>Estreitar relações entre donos de pets, orientando a todos e se esforçando ao máximo de forma a garantir a integridade dos Pets.</p>
+							<div class="spacer-sm"></div>
+						</div>
 					</div>
 
 					<div class="section-light">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-12 col-sm-12">
 								<h2>Porque escolher os nossos serviços?</h2>
 								<div class="panel-group panel-group__alt" id="accordion">
 									<div class="panel panel-default">
@@ -87,52 +99,23 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="spacer-lg visible-sm visible-xs"></div>
-								<h2>Our Capabilities</h2>
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-										<span class="progress-label">UI Design</span>
-										80%
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-										<span class="progress-label">Branding &amp; Identity</span>
-										70%
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-										<span class="progress-label">JavaScript</span>
-										60%
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-										<span class="progress-label">HTML5&amp;CSS3</span>
-										90%
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-										<span class="progress-label">WordPress</span>
-										70%
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-										<span class="progress-label">PHP &amp; MySQL</span>
-										60%
-									</div>
-								</div>
-								<div class="progress">
-									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-										<span class="progress-label">SEO</span>
-										45%
-									</div>
-								</div>
-							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<h2 style="text-align: center;">Opiniões e Testemunhos</h2>
+						<div class="col-md-4 col-sm-12">
+							<p>"O atendimento é bom, eles têm muito cuidado com os 'pets'! E tem veterinário 24h!" - Daniel Motta</p>
+							<div class="spacer-sm"></div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p>"Cuidado extremo com nossos pets, além da total segurança que podemos ter em um vet 24h." - Priscila Amaral</p>
+							<div class="spacer-sm"></div>
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p>"Super indico! Meus pets adoram, sempre muio bem tratados, não troco por nada!" - Camila Tauana</p>
+							<div class="spacer-sm"></div>
 						</div>
 					</div>
 

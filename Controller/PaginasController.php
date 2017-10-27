@@ -46,6 +46,11 @@ class PaginasController
         require_once "View/Home/contato.php";
     }
 
+     public function mostraProntopet()
+    {
+        require_once "View/Home/pronto-pet.php";
+    }
+
     public function buscarAnimal()
     {
         require_once "View/Home/buscar-animal.php";

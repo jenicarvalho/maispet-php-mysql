@@ -31,289 +31,112 @@
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
+									<img src="assets/images/equipe/vet1.jpg" alt="">
 								
 									<div class="overlay"></div>
 								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">John Doe</h5>
-									<span class="team-head-info">CEO</span>
+									<h5 class="team-name">Carlos Alberto Ferreira</h5>
+									<span class="team-head-info">Veterinário</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
+									<img src="assets/images/equipe/vet2.jpg" alt="">
 								
 									<div class="overlay"></div>
-								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
+																
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">Michael Smith</h5>
-									<span class="team-head-info">Web Designer</span>
+									<h5 class="team-name">Carla Garcia</h5>
+									<span class="team-head-info">Veterinária</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
+									<img src="assets/images/equipe/vet3.jpg" alt="">
 								
 									<div class="overlay"></div>
 								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">Sasha Gray</h5>
-									<span class="team-head-info">PHP Developer</span>
+									<h5 class="team-name">Antonio Silveira Neto</h5>
+									<span class="team-head-info">Veterinário</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
+									<img src="assets/images/equipe/vet4.jpg" alt="">
 								
 									<div class="overlay"></div>
 								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
 								
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">Hanna Doe</h5>
-									<span class="team-head-info">HTML Coder</span>
+									<h5 class="team-name">Antonia Valentin</h5>
+									<span class="team-head-info">Veterinária</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
+									<img src="assets/images/equipe/at1.jpg" alt="">
 								
 									<div class="overlay"></div>
 								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">John Doe</h5>
-									<span class="team-head-info">CEO</span>
+									<h5 class="team-name">Patrícia Cabreira</h5>
+									<span class="team-head-info">Atendente</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
+									<img src="assets/images/equipe/at4.jpg" alt="">
 								
 									<div class="overlay"></div>
 								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">Michael Smith</h5>
-									<span class="team-head-info">Web Designer</span>
+									<h5 class="team-name">Mariana Felício</h5>
+									<span class="team-head-info">Atendente</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
-								
+									<img src="assets/images/equipe/at3.jpg" alt="">
 									<div class="overlay"></div>
-								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">Sasha Gray</h5>
-									<span class="team-head-info">PHP Developer</span>
+									<h5 class="team-name">Marcos Oliveira</h5>
+									<span class="team-head-info">Atendente</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 						<li class="team-item col-md-3">
 							<div class="team-item-inner">
 								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
+									<img src="assets/images/equipe/at2.jpg" alt="">
 								
 									<div class="overlay"></div>
 								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
 								</figure>
 								<header class="team-head">
-									<h5 class="team-name">Hanna Doe</h5>
-									<span class="team-head-info">HTML Coder</span>
+									<h5 class="team-name">Alexandre Costa</h5>
+									<span class="team-head-info">Atendente</span>
 								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
-							</div>
-						</li>
-						<li class="team-item col-md-3">
-							<div class="team-item-inner">
-								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
-								
-									<div class="overlay"></div>
-								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
-								</figure>
-								<header class="team-head">
-									<h5 class="team-name">John Doe</h5>
-									<span class="team-head-info">CEO</span>
-								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
-							</div>
-						</li>
-						<li class="team-item col-md-3">
-							<div class="team-item-inner">
-								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
-								
-									<div class="overlay"></div>
-								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
-								</figure>
-								<header class="team-head">
-									<h5 class="team-name">Michael Smith</h5>
-									<span class="team-head-info">Web Designer</span>
-								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
-							</div>
-						</li>
-						<li class="team-item col-md-3">
-							<div class="team-item-inner">
-								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
-								
-									<div class="overlay"></div>
-								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
-								</figure>
-								<header class="team-head">
-									<h5 class="team-name">Sasha Gray</h5>
-									<span class="team-head-info">PHP Developer</span>
-								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
-							</div>
-						</li>
-						<li class="team-item col-md-3">
-							<div class="team-item-inner">
-								<figure class="team-thumb">
-									<img src="http://placehold.it/288x268" alt="">
-								
-									<div class="overlay"></div>
-								
-									<ul class="team-social list-unstyled">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								
-								</figure>
-								<header class="team-head">
-									<h5 class="team-name">Hanna Doe</h5>
-									<span class="team-head-info">HTML Coder</span>
-								</header>
-								<div class="team-excerpt">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-								</div>
 							</div>
 						</li>
 					</ul>

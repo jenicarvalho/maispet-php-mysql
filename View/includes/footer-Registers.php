@@ -10,8 +10,9 @@
                   <h3 class="widget-title">Links</h3>
                   <div class="widget-content">
                     <ul>
-                      <li><a href="?pagina=mantenedora">Mantenedora</a></li>
+                      <li><a href="?pagina=mantenedora">Quem Somos?</a></li>
                       <li><a href="?pagina=profissionais">Profissionais</a></li>
+                      <li><a href="?pagina=prontopet">Pronto Pet</a></li>
                       <li><a href="?pagina=contato">Fale Conosco</a></li>
                     </ul>
                   </div>
@@ -71,18 +72,11 @@
                       <div class="row">
                         <div class="col-md-8">
                           <div class="form-group">
-                            <input type="email" 
-                              value=""
-                              data-msg-required="Please enter email address."
-                              data-msg-email="Please enter a valid email address."
-                              class="form-control"
-                              placeholder="Digite aqui seu email..."
-                              name="subscribe-email"
-                              id="subscribe-email">
+                              <input type="email" value="" name="EMAIL" placeholder="Digite aqui seu e-mail" class="required email form-control" id="mce-EMAIL">
                           </div>
                         </div>
                         <div class="col-md-4">
-                          <button type="submit" class="btn btn-success btn-block" data-loading-text="Loading...">Enviar</button>
+                          <input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-block button">
                         </div>
                       </div>
                     </form>
@@ -159,6 +153,10 @@
       } 
     }
   </script>
+
+  <!--    JS MAILCHIMP     -->
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='BIRTHDAY';ftypes[3]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
   <script type="text/javascript" src="assets/vendor/bootstrap-notify.min.js"></script>
   <script src="assets/vendor/jquery.flexnav.min.js"></script>
   <script src="assets/vendor/jquery.hoverIntent.minified.js"></script>

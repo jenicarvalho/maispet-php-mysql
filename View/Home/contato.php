@@ -27,14 +27,14 @@
 
 					<!-- Google Map -->
 					<div class="googlemap-wrapper">
-						<div id="map_canvas" class="map-canvas"></div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.928168375079!2d-47.156058251347254!3d-22.768046885009273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8955faa36b1af%3A0x75a6d9274688b97!2sPRONTOPET!5e0!3m2!1spt-BR!2sbr!4v1509107634739" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 					<!-- Google Map / End -->
 					
 					<div class="row">
 						<div class="col-md-9">
 							<h2>Formulário de contato</h2>
-							<form action="php/contact-form.php" id="contact-form">
+							<form action="action.php" id="contact-form">
 
 								<div class="alert alert-success hidden" id="contact-alert-success">
 									<strong>Sucesso!</strong> Agradecemos o contato. Responderemos assim que possível!
@@ -52,12 +52,12 @@
 												value=""
 												placeholder="Informe seu nome completo."
 												class="form-control"
-												name="nome" id="nome">
+												name="name" id="name">
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label>Email <span class="required">*</span></label>
+											<label>E-mail <span class="required">*</span></label>
 											<input type="email" 
 												value=""
 												placeholder="Informe seu email."
@@ -69,13 +69,36 @@
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
+											<label>Telefone/Celular <span class="required">*</span></label>
+											<input type="text" 
+												value=""
+												placeholder="Informe seu telefone/celular."
+												data-msg-email="Email Invalido."
+												class="form-control"
+												name="phone"
+												id="phone">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Tipo de Pet</label>
+											<input type="text" 
+												value=""
+												placeholder="Escreva aqui o tipo de Pet."
+												class="form-control"
+												name="pet"
+												id="pet">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
 											<label>Assunto</label>
 											<input type="text" 
 												value=""
 												placeholder="Escreva aqui o assunto da sua mensagem."
 												class="form-control"
-												name="assunto"
-												id="assunto">
+												name="subject"
+												id="subject">
 										</div>
 									</div>
 								</div>
@@ -87,8 +110,8 @@
 												placeholder="Escreva aqui sua mensagem."
 												rows="10"
 												class="form-control"
-												name="mensagem"
-												id="mensagem"></textarea>
+												name="message"
+												id="message"></textarea>
 										</div>
 									</div>
 								</div>
@@ -115,7 +138,7 @@
 										<li>
 											<i class="fa fa-phone"></i>
 											<div class="info-item">
-												(19) 98199-8449<br>
+												(19) 3833-3680<br>
 									
 											</div>
 										</li>
@@ -135,7 +158,7 @@
 										<li>
 											<i class="fa fa-clock-o"></i>
 											<div class="info-item">
-												Segunda - Sexta 8:00 - 18:00
+												24h
 											</div>
 										</li>
 									</ul>
