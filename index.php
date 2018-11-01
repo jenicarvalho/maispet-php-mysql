@@ -3,15 +3,11 @@ session_start();
 
 require_once "./Controller/PaginasController.php";
 
-$pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : "index";
+$pagina = $_GET["pagina"];
 
 $ctrl = new PaginasController();
 
 switch($pagina) {
-    case "index" : 
-    $ctrl->Index();
-    break;
-    
     case "login" : 
     $ctrl->Login();
     break;
@@ -78,4 +74,7 @@ switch($pagina) {
     case "editar_anuncio" :
     $ctrl->editarAnuncio();
     break;
+        
+    default :
+    $ctrl->Index();
 }
