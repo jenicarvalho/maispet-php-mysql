@@ -2,16 +2,11 @@
 session_start();
 
 require_once "./Controller/PaginasController.php";
-
-$pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : "index";
-
 $ctrl = new PaginasController();
 
+$pagina = $_GET["pagina"];
+
 switch($pagina) {
-    case "index" : 
-    $ctrl->Index();
-    break;
-    
     case "login" : 
     $ctrl->Login();
     break;
@@ -48,8 +43,6 @@ switch($pagina) {
     $ctrl->mostraProntopet();
     break;
 
-
-
     // Painel
     case "painel_cliente" : 
     $ctrl->PainelCliente();
@@ -78,4 +71,7 @@ switch($pagina) {
     case "editar_anuncio" :
     $ctrl->editarAnuncio();
     break;
+        
+    default :
+    $ctrl->Index();
 }
