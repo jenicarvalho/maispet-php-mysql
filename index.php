@@ -2,10 +2,9 @@
 session_start();
 
 require_once "./Controller/PaginasController.php";
+$ctrl = new PaginasController();
 
 $pagina = $_GET["pagina"];
-
-$ctrl = new PaginasController();
 
 switch($pagina) {
     case "login" : 
@@ -43,8 +42,6 @@ switch($pagina) {
     case "prontopet" :
     $ctrl->mostraProntopet();
     break;
-
-
 
     // Painel
     case "painel_cliente" : 
